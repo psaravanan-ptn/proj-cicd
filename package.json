@@ -7,14 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "react-dom": "^18"    
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.5",
