@@ -7,7 +7,7 @@ afterEach(cleanup);
 
 it('HomeComponent should render', () => {
     render(
-        <HomeComponent />,
+        <HomeComponent />
     );
     const welcomeText = screen.getByText(/Welcome Home/i)
     expect(welcomeText).toBeInTheDocument();

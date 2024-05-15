@@ -1,5 +1,5 @@
 export default function HomeComponent()  {
-    return <div>
+    return (<div>
         <h2>Welcome Home</h2>
-    </div>
+    </div>)
 }
