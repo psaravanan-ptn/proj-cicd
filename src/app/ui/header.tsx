@@ -1,6 +1,6 @@
 "use client"
 
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import  className from 'classnames';
@@ -74,9 +74,9 @@ export default function Header() {
           <Link href="/about" className={className("text-sm leading-6 text-gray-900", {'font-semibold': pathname === '/about'})}>About</Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+            Log in me <span aria-hidden="true">&rarr;</span>
+          </Link>
         </div>
       </nav>
       <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -148,12 +148,9 @@ export default function Header() {
                 </a>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                <Link href="/login" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>

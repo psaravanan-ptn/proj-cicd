@@ -41,7 +41,7 @@ export default function Todo() {
                     {/* ... */}
                 </Fieldset>
             </div>
-
+            <h1>LIST People</h1>
             <ul className="divide-y divide-gray-200">
                 {people.map((person) => (
                     <Link href="/todos/todo" className="">

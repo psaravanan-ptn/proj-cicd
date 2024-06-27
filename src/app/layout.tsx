@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
+import Link from 'next/link';
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Header from "./ui/header";
+import Header from "@/app/ui/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +18,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  auth
+}: {
+  children: React.ReactNode
+  auth: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header />
+        <nav>
+        <Link href="/login">Open modal</Link>
+      </nav>
         {children}
+        <div>{auth}</div>
         <footer className="footer mt-10">Footer Section</footer>
       </body>
     </html>
